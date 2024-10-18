@@ -15,6 +15,15 @@ General Features & Update Notes
 -- Change all dxt to png. 
 
 
--- The TBL system was changed and a system for reading data from the mysql database was introduced. -- Improvements were made to client graphics and a character shadow system was introduced. -- Since the game engine is old, the source code has been stabilized with a major update and Visual Studio 2022 has been updated. -- The loading screen at gate passes has been removed. -- Server Back-end Update v2xx -- v1453 game updates completed.
+-- The TBL system was changed and a system for reading data from the mysql database was introduced.
+
+-- Improvements were made to client graphics and a character shadow system was introduced. 
+
+-- Since the game engine is old, the source code has been stabilized with a major update and Visual Studio 2022 has been updated.
+
+-- The loading screen at gate passes has been removed. 
+
+-- Server Back-end Update v2xx -- v1453 game updates completed.
+
 
 Our project is not open to sharing. Developers who want to take part in the project must first convey their skills and the projects they can contribute to.
