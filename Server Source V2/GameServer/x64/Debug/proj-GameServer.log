@@ -1,0 +1,3 @@
+﻿  MagicInstance.cpp
+C:\Users\Administrator\Desktop\Source\ServerSource\GameServer\MagicInstance.cpp(3845,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  proj-GameServer.vcxproj -> C:\Users\Administrator\Desktop\Source\bin\Debug\GameServer.exe

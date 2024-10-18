@@ -1,0 +1,2035 @@
+// Created by Microsoft (R) C/C++ Compiler Version 14.16.27034.0 (66017635).
+//
+// easendmailobj.tli
+//
+// Wrapper implementations for Win32 type library ..\\..\\EASendMailObj\Release\\EASendMailObj.dll
+// compiler-generated file created 12/17/20 at 15:06:33 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface ISimpleJsonArray wrapper method implementations
+//
+
+inline long ISimpleJsonArray::GetLength ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Length(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ISimpleJsonArray::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ISimpleJsonArray::Add ( _bstr_t newVal ) {
+    HRESULT _hr = raw_Add(newVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ISimpleJsonArray::RemoveAt ( long Index ) {
+    HRESULT _hr = raw_RemoveAt(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ISimpleJsonArray::Clear ( ) {
+    HRESULT _hr = raw_Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t ISimpleJsonArray::Item ( long Index ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IBrowserUi wrapper method implementations
+//
+
+inline VARIANT_BOOL IBrowserUi::OpenUrl ( _bstr_t URL ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_OpenUrl(URL, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IBrowserUi::OpenIEObject ( _bstr_t URL, long Left, long Top, long Height, long Width ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_OpenIEObject(URL, Left, Top, Height, Width, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IBrowserUi::GetLastError ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetLastError(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IBrowserUi::OpenIE ( _bstr_t URL, VARIANT_BOOL IsPrivate ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_OpenIE(URL, IsPrivate, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IBrowserUi::GetIEVersion ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetIEVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IBrowserUi::ClosePrivateIE ( ) {
+    HRESULT _hr = raw_ClosePrivateIE();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IBrowserUi::IsPrivateIEClosed ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsPrivateIEClosed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IHttpListener wrapper method implementations
+//
+
+inline VARIANT_BOOL IHttpListener::Create ( _bstr_t IPv4Address, long Port ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Create(IPv4Address, Port, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IHttpListener::GetRequestUrl ( long Timeout ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetRequestUrl(Timeout, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IHttpListener::SendResponse ( _bstr_t ResponseCode, _bstr_t ContentType, _bstr_t Content ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SendResponse(ResponseCode, ContentType, Content, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IHttpListener::Close ( ) {
+    HRESULT _hr = raw_Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IHttpListener::GetRequestUrl ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_RequestUrl(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IHttpListener::GetListenPort ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ListenPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IHttpListener::GetLastError ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetLastError(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IHttpListener::ClearUrl ( ) {
+    HRESULT _hr = raw_ClearUrl();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IHttpListener::BeginGetRequestUrl ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_BeginGetRequestUrl(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// dispinterface _IMailEvents wrapper method implementations
+//
+
+inline HRESULT _IMailEvents::OnClosed ( ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, NULL);
+    return _result;
+}
+
+inline HRESULT _IMailEvents::OnSending ( long lSent, long lTotal ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x0003", lSent, lTotal);
+    return _result;
+}
+
+inline HRESULT _IMailEvents::OnError ( long lError, _bstr_t ErrDescription ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x0008", lError, (BSTR)ErrDescription);
+    return _result;
+}
+
+inline HRESULT _IMailEvents::OnConnected ( ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_ERROR, (void*)&_result, NULL);
+    return _result;
+}
+
+inline HRESULT _IMailEvents::OnAuthenticated ( ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_ERROR, (void*)&_result, NULL);
+    return _result;
+}
+
+inline HRESULT _IMailEvents::OnSendCommand ( BSTR * Command ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x4008", Command);
+    return _result;
+}
+
+inline HRESULT _IMailEvents::OnServerRespond ( BSTR * Response ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x4008", Response);
+    return _result;
+}
+
+inline HRESULT _IMailEvents::OnWriteLog ( _bstr_t LogContent ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x8, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)LogContent);
+    return _result;
+}
+
+//
+// dispinterface _IFastSenderEvents wrapper method implementations
+//
+
+inline HRESULT _IFastSenderEvents::OnSent ( long lRet, _bstr_t ErrDesc, long nKey, _bstr_t tParam, _bstr_t senderAddr, _bstr_t Recipients ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x0008\x0003\x0008\x0008\x0008", lRet, (BSTR)ErrDesc, nKey, (BSTR)tParam, (BSTR)senderAddr, (BSTR)Recipients);
+    return _result;
+}
+
+inline HRESULT _IFastSenderEvents::OnConnected ( long nKey, _bstr_t tParam ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x0008", nKey, (BSTR)tParam);
+    return _result;
+}
+
+inline HRESULT _IFastSenderEvents::OnAuthenticated ( long nKey, _bstr_t tParam ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x0008", nKey, (BSTR)tParam);
+    return _result;
+}
+
+inline HRESULT _IFastSenderEvents::OnSending ( long lSent, long lTotal, long nKey, _bstr_t tParam ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x0003\x0003\x0008", lSent, lTotal, nKey, (BSTR)tParam);
+    return _result;
+}
+
+inline HRESULT _IFastSenderEvents::OnBeforeConnect ( BSTR * Server, BSTR * User, BSTR * Password, long * Port, VARIANT_BOOL * SSL ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x4008\x4008\x4008\x4003\x400b", Server, User, Password, Port, SSL);
+    return _result;
+}
+
+//
+// interface IOAuthResponseParser wrapper method implementations
+//
+
+inline HRESULT IOAuthResponseParser::Load ( _bstr_t Input ) {
+    HRESULT _hr = raw_Load(Input);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IOAuthResponseParser::GetAccessToken ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_AccessToken(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IOAuthResponseParser::GetRefreshToken ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_RefreshToken(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IOAuthResponseParser::GetIdToken ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_IdToken(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IOAuthResponseParser::GetTokenExpiresInSeconds ( ) {
+    long _result = 0;
+    HRESULT _hr = get_TokenExpiresInSeconds(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IOAuthResponseParser::GetEmailInIdToken ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_EmailInIdToken(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// dispinterface _IHttpListenerEvents wrapper method implementations
+//
+
+inline HRESULT _IHttpListenerEvents::OnRequest ( IDispatch * oSender, _bstr_t URL ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009\x0008", oSender, (BSTR)URL);
+    return _result;
+}
+
+inline HRESULT _IHttpListenerEvents::OnError ( IDispatch * oSender, _bstr_t ErrorDescription ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009\x0008", oSender, (BSTR)ErrorDescription);
+    return _result;
+}
+
+//
+// interface IMail wrapper method implementations
+//
+
+inline long IMail::GetBodyFormat ( ) {
+    long _result = 0;
+    HRESULT _hr = get_BodyFormat(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutBodyFormat ( long pVal ) {
+    HRESULT _hr = put_BodyFormat(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetBodyText ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_BodyText(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutBodyText ( _bstr_t pVal ) {
+    HRESULT _hr = put_BodyText(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetCharset ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Charset(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutCharset ( _bstr_t pVal ) {
+    HRESULT _hr = put_Charset(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetFrom ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_From(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutFrom ( _bstr_t pVal ) {
+    HRESULT _hr = put_From(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetFromAddr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_FromAddr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutFromAddr ( _bstr_t pVal ) {
+    HRESULT _hr = put_FromAddr(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetLogFileName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_LogFileName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutLogFileName ( _bstr_t pVal ) {
+    HRESULT _hr = put_LogFileName(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetLicenseCode ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_LicenseCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutLicenseCode ( _bstr_t pVal ) {
+    HRESULT _hr = put_LicenseCode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetServerAddr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ServerAddr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutServerAddr ( _bstr_t pVal ) {
+    HRESULT _hr = put_ServerAddr(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetServerPort ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ServerPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutServerPort ( long pVal ) {
+    HRESULT _hr = put_ServerPort(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetSubject ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Subject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutSubject ( _bstr_t pVal ) {
+    HRESULT _hr = put_Subject(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetReplyTo ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ReplyTo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutReplyTo ( _bstr_t pVal ) {
+    HRESULT _hr = put_ReplyTo(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetPriority ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Priority(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutPriority ( long pVal ) {
+    HRESULT _hr = put_Priority(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetTimeout ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Timeout(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutTimeout ( long pVal ) {
+    HRESULT _hr = put_Timeout(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetUserName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_UserName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutUserName ( _bstr_t pVal ) {
+    HRESULT _hr = put_UserName(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetPassword ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Password(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutPassword ( _bstr_t pVal ) {
+    HRESULT _hr = put_Password(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetVersion ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Version(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IMail::GetAsynchronous ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Asynchronous(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutAsynchronous ( long pVal ) {
+    HRESULT _hr = put_Asynchronous(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetAltBody ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_AltBody(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutAltBody ( _bstr_t pVal ) {
+    HRESULT _hr = put_AltBody(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::AddAttachment ( _bstr_t strFile ) {
+    long _result = 0;
+    HRESULT _hr = raw_AddAttachment(strFile, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::AddRecipient ( _bstr_t strName, _bstr_t strAddress, long Flags ) {
+    long _result = 0;
+    HRESULT _hr = raw_AddRecipient(strName, strAddress, Flags, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMail::ClearAttachment ( ) {
+    HRESULT _hr = raw_ClearAttachment();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMail::ClearRecipient ( ) {
+    HRESULT _hr = raw_ClearRecipient();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMail::ConvertHTML ( long Flags ) {
+    HRESULT _hr = raw_ConvertHTML(Flags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMail::ImportMail ( _bstr_t strFile ) {
+    long _result = 0;
+    HRESULT _hr = raw_ImportMail(strFile, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMail::Reset ( ) {
+    HRESULT _hr = raw_Reset();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMail::SendMail ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_SendMail(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::AddAttachmentEx ( _bstr_t strFile, _bstr_t strAlt ) {
+    long _result = 0;
+    HRESULT _hr = raw_AddAttachmentEx(strFile, strAlt, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMail::AddInline ( _bstr_t strFile ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_AddInline(strFile, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMail::AddInlineEx ( _bstr_t strFile, _bstr_t strAlt ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_AddInlineEx(strFile, strAlt, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IMail::ClearInline ( ) {
+    HRESULT _hr = raw_ClearInline();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMail::SaveMail ( _bstr_t strFile ) {
+    long _result = 0;
+    HRESULT _hr = raw_SaveMail(strFile, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::AddHeader ( _bstr_t strHeader, _bstr_t strValue ) {
+    long _result = 0;
+    HRESULT _hr = raw_AddHeader(strHeader, strValue, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMail::ClearHeader ( ) {
+    HRESULT _hr = raw_ClearHeader();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMail::Terminate ( ) {
+    HRESULT _hr = raw_Terminate();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMail::GetLastError ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetLastError(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMail::GetLastErrDescription ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetLastErrDescription(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IMail::GetAnonymous ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Anonymous(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutAnonymous ( long pVal ) {
+    HRESULT _hr = put_Anonymous(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IMail::SetMailer ( _bstr_t Mailer ) {
+    HRESULT _hr = raw_SetMailer(Mailer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMail::GetKeepConnection ( ) {
+    long _result = 0;
+    HRESULT _hr = get_KeepConnection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutKeepConnection ( long pVal ) {
+    HRESULT _hr = put_KeepConnection(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::ImportMailEx ( _bstr_t strFile ) {
+    long _result = 0;
+    HRESULT _hr = raw_ImportMailEx(strFile, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::GetTransferEncoding ( ) {
+    long _result = 0;
+    HRESULT _hr = get_TransferEncoding(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutTransferEncoding ( long pVal ) {
+    HRESULT _hr = put_TransferEncoding(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetEmailServer ( _bstr_t EmailAddr ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetEmailServer(EmailAddr, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IMail::AddRecipientEx ( _bstr_t AddressList, long Flags ) {
+    long _result = 0;
+    HRESULT _hr = raw_AddRecipientEx(AddressList, Flags, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::AddAttachments ( _bstr_t sPath ) {
+    long _result = 0;
+    HRESULT _hr = raw_AddAttachments(sPath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMail::GetComputerName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ComputerName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutComputerName ( _bstr_t pVal ) {
+    HRESULT _hr = put_ComputerName(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetBodyFormatEx ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_BodyFormatEx(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutBodyFormatEx ( _bstr_t pVal ) {
+    HRESULT _hr = put_BodyFormatEx(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetHeaderEncoding ( ) {
+    long _result = 0;
+    HRESULT _hr = get_HeaderEncoding(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutHeaderEncoding ( long pVal ) {
+    HRESULT _hr = put_HeaderEncoding(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::SaveMailEx ( _bstr_t PickupPath ) {
+    long _result = 0;
+    HRESULT _hr = raw_SaveMailEx(PickupPath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::TestEmailAddr ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_TestEmailAddr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMail::GetAllEmailServers ( _bstr_t EmailAddr ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetAllEmailServers(EmailAddr, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMail::GetEmailContent ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetEmailContent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMail::GetEmailHeaders ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetEmailHeaders(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMail::GetAllRecipients ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetAllRecipients(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMail::GetSenderAddr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetSenderAddr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IMail::GetTryAllSmtpServers ( ) {
+    long _result = 0;
+    HRESULT _hr = get_TryAllSmtpServers(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutTryAllSmtpServers ( long pVal ) {
+    HRESULT _hr = put_TryAllSmtpServers(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::CreateFolder ( _bstr_t FolderName ) {
+    long _result = 0;
+    HRESULT _hr = raw_CreateFolder(FolderName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::DeleteFile ( _bstr_t FileName ) {
+    long _result = 0;
+    HRESULT _hr = raw_DeleteFile(FileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::GetRawModeEnable ( ) {
+    long _result = 0;
+    HRESULT _hr = get_RawModeEnable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutRawModeEnable ( long pVal ) {
+    HRESULT _hr = put_RawModeEnable(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetWrapEmailAddr ( ) {
+    long _result = 0;
+    HRESULT _hr = get_WrapEmailAddr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutWrapEmailAddr ( long pVal ) {
+    HRESULT _hr = put_WrapEmailAddr(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetDeliveryNotification ( ) {
+    long _result = 0;
+    HRESULT _hr = get_DeliveryNotification(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutDeliveryNotification ( long pVal ) {
+    HRESULT _hr = put_DeliveryNotification(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::Get_Idle ( ) {
+    long _result = 0;
+    HRESULT _hr = get__Idle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::SSL_init ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_SSL_init(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::GetSSL_ignorecerterror ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SSL_ignorecerterror(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutSSL_ignorecerterror ( long pVal ) {
+    HRESULT _hr = put_SSL_ignorecerterror(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetSSL_starttls ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SSL_starttls(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutSSL_starttls ( long pVal ) {
+    HRESULT _hr = put_SSL_starttls(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IMail::SSL_uninit ( ) {
+    HRESULT _hr = raw_SSL_uninit();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMail::GetSSL_enabled ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SSL_enabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMail::Getraw_Content ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_raw_Content(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::Putraw_Content ( _bstr_t pVal ) {
+    HRESULT _hr = put_raw_Content(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetLogLevel ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LogLevel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutLogLevel ( long pVal ) {
+    HRESULT _hr = put_LogLevel(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline ICertificatePtr IMail::GetSignerCert ( ) {
+    struct ICertificate * _result = 0;
+    HRESULT _hr = get_SignerCert(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICertificatePtr(_result, false);
+}
+
+inline void IMail::PutSignerCert ( struct ICertificate * pVal ) {
+    HRESULT _hr = put_SignerCert(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline ICertificateCollectionPtr IMail::GetRecipientsCerts ( ) {
+    struct ICertificateCollection * _result = 0;
+    HRESULT _hr = get_RecipientsCerts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICertificateCollectionPtr(_result, false);
+}
+
+inline HRESULT IMail::WriteLog ( _bstr_t LogContent ) {
+    HRESULT _hr = raw_WriteLog(LogContent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IMail::GetReturnPath ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ReturnPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutReturnPath ( _bstr_t pVal ) {
+    HRESULT _hr = put_ReturnPath(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetLocalIP ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_LocalIP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutLocalIP ( _bstr_t pVal ) {
+    HRESULT _hr = put_LocalIP(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::ImportHtml ( _bstr_t html, _bstr_t BasePath ) {
+    long _result = 0;
+    HRESULT _hr = raw_ImportHtml(html, BasePath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::AddAttachment1 ( _bstr_t FileName, const _variant_t & Stream ) {
+    long _result = 0;
+    HRESULT _hr = raw_AddAttachment1(FileName, Stream, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::GetAuthType ( ) {
+    long _result = 0;
+    HRESULT _hr = get_AuthType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutAuthType ( long pVal ) {
+    HRESULT _hr = put_AuthType(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetSpecialFlags ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SpecialFlags(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutSpecialFlags ( long pVal ) {
+    HRESULT _hr = put_SpecialFlags(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetDisplayTo ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_DisplayTo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutDisplayTo ( _bstr_t pVal ) {
+    HRESULT _hr = put_DisplayTo(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE IMail::GetDate ( ) {
+    DATE _result = 0;
+    HRESULT _hr = get_Date(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutDate ( DATE pVal ) {
+    HRESULT _hr = put_Date(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetMessageID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_MessageID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutMessageID ( _bstr_t pVal ) {
+    HRESULT _hr = put_MessageID(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IMail::AppendBody ( _bstr_t BodyText, long bAlt ) {
+    HRESULT _hr = raw_AppendBody(BodyText, bAlt);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IMail::AddInline1 ( _bstr_t FileName, const _variant_t & Stream ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_AddInline1(FileName, Stream, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IMail::SendMailToQueue ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_SendMailToQueue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::GetNoWrapBody ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NoWrapBody(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutNoWrapBody ( long pVal ) {
+    HRESULT _hr = put_NoWrapBody(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetEncryptionAlgorithm ( ) {
+    long _result = 0;
+    HRESULT _hr = get_EncryptionAlgorithm(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutEncryptionAlgorithm ( long pVal ) {
+    HRESULT _hr = put_EncryptionAlgorithm(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IMail::ClearHeaderEx ( _bstr_t HeaderName ) {
+    HRESULT _hr = raw_ClearHeaderEx(HeaderName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IMail::GetEmailChunk ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetEmailChunk(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline long IMail::AddAttachmentCT ( _bstr_t FileName, _bstr_t ContentType ) {
+    long _result = 0;
+    HRESULT _hr = raw_AddAttachmentCT(FileName, ContentType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMail::GetSocksProxyServer ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_SocksProxyServer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutSocksProxyServer ( _bstr_t pVal ) {
+    HRESULT _hr = put_SocksProxyServer(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetSocksProxyUser ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_SocksProxyUser(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutSocksProxyUser ( _bstr_t pVal ) {
+    HRESULT _hr = put_SocksProxyUser(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetSocksProxyPassword ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_SocksProxyPassword(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutSocksProxyPassword ( _bstr_t pVal ) {
+    HRESULT _hr = put_SocksProxyPassword(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetSocksProxyPort ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SocksProxyPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutSocksProxyPort ( long pVal ) {
+    HRESULT _hr = put_SocksProxyPort(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetProxyProtocol ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ProxyProtocol(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutProxyProtocol ( long pVal ) {
+    HRESULT _hr = put_ProxyProtocol(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetDK_PublicKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_DK_PublicKey(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IMail::LoadMessage ( _bstr_t FileName ) {
+    long _result = 0;
+    HRESULT _hr = raw_LoadMessage(FileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IMail::GetReadReceipt ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ReadReceipt(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutReadReceipt ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_ReadReceipt(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::LoadMessageChunk ( const _variant_t & newVal ) {
+    long _result = 0;
+    HRESULT _hr = raw_LoadMessageChunk(newVal, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IMail::GetRecipients ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Recipients(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline long IMail::GetStyle ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Style(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutStyle ( long pVal ) {
+    HRESULT _hr = put_Style(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IMail::SetAttHeader ( long Index, _bstr_t HeaderKey, _bstr_t HeaderValue ) {
+    HRESULT _hr = raw_SetAttHeader(Index, HeaderKey, HeaderValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMail::GetAutoCalendar ( ) {
+    long _result = 0;
+    HRESULT _hr = get_AutoCalendar(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutAutoCalendar ( long pVal ) {
+    HRESULT _hr = put_AutoCalendar(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetAttachmentCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_AttachmentCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMail::GetDnsServerIP ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_DnsServerIP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutDnsServerIP ( _bstr_t pVal ) {
+    HRESULT _hr = put_DnsServerIP(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::SendMailToQueueEx ( _bstr_t Instant ) {
+    long _result = 0;
+    HRESULT _hr = raw_SendMailToQueueEx(Instant, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::LoadRawMessage ( _bstr_t FileName, long Flag ) {
+    long _result = 0;
+    HRESULT _hr = raw_LoadRawMessage(FileName, Flag, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IMail::GetProtocol ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Protocol(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutProtocol ( long pVal ) {
+    HRESULT _hr = put_Protocol(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetAlias ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Alias(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutAlias ( _bstr_t pVal ) {
+    HRESULT _hr = put_Alias(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetDrafts ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Drafts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutDrafts ( _bstr_t pVal ) {
+    HRESULT _hr = put_Drafts(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetSender ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Sender(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutSender ( _bstr_t pVal ) {
+    HRESULT _hr = put_Sender(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IMail::Quit ( ) {
+    HRESULT _hr = raw_Quit();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMail::Close ( ) {
+    HRESULT _hr = raw_Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IMail::GetHttpProxyAuthType ( ) {
+    long _result = 0;
+    HRESULT _hr = get_HttpProxyAuthType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutHttpProxyAuthType ( long pVal ) {
+    HRESULT _hr = put_HttpProxyAuthType(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMail::GetSMIMERFCCompatibility ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_SMIMERFCCompatibility(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutSMIMERFCCompatibility ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_SMIMERFCCompatibility(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMail::GetPIPELINING ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_PIPELINING(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutPIPELINING ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_PIPELINING(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetIgnoreDeliveryNotificationError ( ) {
+    long _result = 0;
+    HRESULT _hr = get_IgnoreDeliveryNotificationError(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutIgnoreDeliveryNotificationError ( long pVal ) {
+    HRESULT _hr = put_IgnoreDeliveryNotificationError(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetIPv6Policy ( ) {
+    long _result = 0;
+    HRESULT _hr = get_IPv6Policy(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutIPv6Policy ( long pVal ) {
+    HRESULT _hr = put_IPv6Policy(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetLocalIP6 ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_LocalIP6(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutLocalIP6 ( _bstr_t pVal ) {
+    HRESULT _hr = put_LocalIP6(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::PostToRemoteQueue ( _bstr_t Instance, _bstr_t URL, _bstr_t User, _bstr_t Password ) {
+    long _result = 0;
+    HRESULT _hr = raw_PostToRemoteQueue(Instance, URL, User, Password, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMail::GetMimeSplitor ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_MimeSplitor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMail::PutMimeSplitor ( _bstr_t pVal ) {
+    HRESULT _hr = put_MimeSplitor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMail::GetSaveCopy ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_SaveCopy(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutSaveCopy ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_SaveCopy(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetSignatureHashAlgorithm ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SignatureHashAlgorithm(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutSignatureHashAlgorithm ( long pVal ) {
+    HRESULT _hr = put_SignatureHashAlgorithm(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetAttachmentEncoding ( ) {
+    long _result = 0;
+    HRESULT _hr = get_AttachmentEncoding(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutAttachmentEncoding ( long pVal ) {
+    HRESULT _hr = put_AttachmentEncoding(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetSignatureEncryptionAlgorithm ( ) {
+    long _result = 0;
+    HRESULT _hr = get_SignatureEncryptionAlgorithm(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutSignatureEncryptionAlgorithm ( long pVal ) {
+    HRESULT _hr = put_SignatureEncryptionAlgorithm(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetOaepHashAlgorithm ( ) {
+    long _result = 0;
+    HRESULT _hr = get_OaepHashAlgorithm(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutOaepHashAlgorithm ( long pVal ) {
+    HRESULT _hr = put_OaepHashAlgorithm(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IMail::PutConnectType ( long pVal ) {
+    HRESULT _hr = put_ConnectType(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IMail::GetConnectType ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ConnectType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMail::PutEWSImpersonatedUser ( _bstr_t pVal ) {
+    HRESULT _hr = put_EWSImpersonatedUser(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMail::GetEWSImpersonatedUser ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_EWSImpersonatedUser(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IFastSender wrapper method implementations
+//
+
+inline long IFastSender::Send ( struct IMail * pSmtp, long nKey, _bstr_t tParam ) {
+    long _result = 0;
+    HRESULT _hr = raw_Send(pSmtp, nKey, tParam, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IFastSender::Test ( struct IMail * pSmtp, long nKey, _bstr_t tParam ) {
+    long _result = 0;
+    HRESULT _hr = raw_Test(pSmtp, nKey, tParam, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IFastSender::GetMaxThreads ( ) {
+    long _result = 0;
+    HRESULT _hr = get_MaxThreads(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IFastSender::PutMaxThreads ( long pVal ) {
+    HRESULT _hr = put_MaxThreads(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IFastSender::GetCurrentThreads ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetCurrentThreads(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IFastSender::GetQueuedCount ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetQueuedCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IFastSender::ClearQueuedMails ( ) {
+    HRESULT _hr = raw_ClearQueuedMails();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFastSender::StopAllThreads ( ) {
+    HRESULT _hr = raw_StopAllThreads();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IFastSender::GetIdleThreads ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetIdleThreads(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IFastSender::SendByPickup ( _bstr_t PickupPath, struct IMail * pSmtp, long nKey, _bstr_t tParam ) {
+    long _result = 0;
+    HRESULT _hr = raw_SendByPickup(PickupPath, pSmtp, nKey, tParam, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IFastSender::SendEmlFile ( _bstr_t FileName, _bstr_t senderAddr, _bstr_t recipientAddrs, long nKey, _bstr_t tParam, _bstr_t RegisterKey ) {
+    long _result = 0;
+    HRESULT _hr = raw_SendEmlFile(FileName, senderAddr, recipientAddrs, nKey, tParam, RegisterKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IFastSender::GetComputerName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ComputerName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IFastSender::PutComputerName ( _bstr_t pVal ) {
+    HRESULT _hr = put_ComputerName(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IFastSender::LockEvent ( ) {
+    HRESULT _hr = raw_LockEvent();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFastSender::UnlockEvent ( ) {
+    HRESULT _hr = raw_UnlockEvent();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFastSender::ClearAllMails ( ) {
+    HRESULT _hr = raw_ClearAllMails();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFastSender::Pause ( ) {
+    HRESULT _hr = raw_Pause();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IFastSender::Resume ( ) {
+    HRESULT _hr = raw_Resume();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IFastSender::GetKeepConnection ( ) {
+    long _result = 0;
+    HRESULT _hr = get_KeepConnection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IFastSender::PutKeepConnection ( long pVal ) {
+    HRESULT _hr = put_KeepConnection(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IFastSender::GetMaxMessagePerConnection ( ) {
+    long _result = 0;
+    HRESULT _hr = get_MaxMessagePerConnection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IFastSender::PutMaxMessagePerConnection ( long pVal ) {
+    HRESULT _hr = put_MaxMessagePerConnection(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICertificate wrapper method implementations
+//
+
+inline VARIANT_BOOL ICertificate::FindSubject ( _bstr_t FindKey, long StoreLocation, _bstr_t StoreName ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_FindSubject(FindKey, StoreLocation, StoreName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICertificate::LoadPFX ( const _variant_t & PFXContent, _bstr_t Password, long KeyLocation ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_LoadPFX(PFXContent, Password, KeyLocation, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICertificate::LoadPFXFromFile ( _bstr_t PFXFile, _bstr_t Password, long KeyLocation ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_LoadPFXFromFile(PFXFile, Password, KeyLocation, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICertificate::LoadCert ( const _variant_t & CERTContent ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_LoadCert(CERTContent, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ICertificate::LoadCertFromFile ( _bstr_t CERTFile ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_LoadCertFromFile(CERTFile, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ICertificate::Unload ( ) {
+    HRESULT _hr = raw_Unload();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL ICertificate::GetHasCertificate ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasCertificate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned __int64 ICertificate::GetStore ( ) {
+    unsigned __int64 _result = 0;
+    HRESULT _hr = get_Store(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICertificate::PutStore ( unsigned __int64 pVal ) {
+    HRESULT _hr = put_Store(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline unsigned __int64 ICertificate::GetHandle ( ) {
+    unsigned __int64 _result = 0;
+    HRESULT _hr = get_Handle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICertificate::PutHandle ( unsigned __int64 pVal ) {
+    HRESULT _hr = put_Handle(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t ICertificate::SignMessage ( const _variant_t & Content, long SignatureHashAlgorithm ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_SignMessage(Content, SignatureHashAlgorithm, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline VARIANT_BOOL ICertificate::GetHasPrivateKey ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasPrivateKey(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t ICertificate::GetLastError ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetLastError(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t ICertificate::GetIssuer ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Issuer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ICertificate::PutIssuer ( _bstr_t pVal ) {
+    HRESULT _hr = put_Issuer(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t ICertificate::GetPublicKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_PublicKey(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ICertificate::PutPublicKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_PublicKey(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t ICertificate::GetSubject ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Subject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ICertificate::PutSubject ( _bstr_t pVal ) {
+    HRESULT _hr = put_Subject(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE ICertificate::GetNotAfter ( ) {
+    DATE _result = 0;
+    HRESULT _hr = get_NotAfter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICertificate::PutNotAfter ( DATE pVal ) {
+    HRESULT _hr = put_NotAfter(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE ICertificate::GetNotBefore ( ) {
+    DATE _result = 0;
+    HRESULT _hr = get_NotBefore(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ICertificate::PutNotBefore ( DATE pVal ) {
+    HRESULT _hr = put_NotBefore(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t ICertificate::GetSerialNumber ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_SerialNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ICertificate::PutSerialNumber ( _bstr_t pVal ) {
+    HRESULT _hr = put_SerialNumber(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline ICertificateCollectionPtr ICertificate::FindCertificates ( _bstr_t FindKey, long StoreLocation, _bstr_t StoreName ) {
+    struct ICertificateCollection * _result = 0;
+    HRESULT _hr = raw_FindCertificates(FindKey, StoreLocation, StoreName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICertificateCollectionPtr(_result, false);
+}
+
+inline _variant_t ICertificate::SignMessageEx ( const _variant_t & Content, long SignatureHashAlgorithm, long SignatureHashEncryption ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_SignMessageEx(Content, SignatureHashAlgorithm, SignatureHashEncryption, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _bstr_t ICertificate::GetBase64Thumbprint ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Base64Thumbprint(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t ICertificate::GetThumbprint ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Thumbprint(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface ICertificateCollection wrapper method implementations
+//
+
+inline long ICertificateCollection::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline ICertificatePtr ICertificateCollection::Item ( long Index ) {
+    struct ICertificate * _result = 0;
+    HRESULT _hr = raw_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICertificatePtr(_result, false);
+}
+
+inline HRESULT ICertificateCollection::Add ( struct ICertificate * oCert ) {
+    HRESULT _hr = raw_Add(oCert);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICertificateCollection::Insert ( long Index, struct ICertificate * oCert ) {
+    HRESULT _hr = raw_Insert(Index, oCert);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICertificateCollection::Clear ( ) {
+    HRESULT _hr = raw_Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICertificateCollection::RemoveAt ( long Index ) {
+    HRESULT _hr = raw_RemoveAt(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t ICertificateCollection::EncryptMessage ( long EncryptionAlgorithm, const _variant_t & Content ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_EncryptMessage(EncryptionAlgorithm, Content, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline VARIANT_BOOL ICertificateCollection::GetHasEncryptCert ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasEncryptCert(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t ICertificateCollection::GetLastError ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetLastError(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _variant_t ICertificateCollection::EncryptMessageEx ( long EncryptionAlgorithm, long OaepHashAlgorithm, const _variant_t & Content ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_EncryptMessageEx(EncryptionAlgorithm, OaepHashAlgorithm, Content, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface ISimpleJsonParser wrapper method implementations
+//
+
+inline _bstr_t ISimpleJsonParser::GetJsonValue ( _bstr_t Source, _bstr_t Key ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetJsonValue(Source, Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ISimpleJsonArrayPtr ISimpleJsonParser::ParseArray ( _bstr_t Source ) {
+    struct ISimpleJsonArray * _result = 0;
+    HRESULT _hr = raw_ParseArray(Source, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ISimpleJsonArrayPtr(_result, false);
+}
+
+inline _bstr_t ISimpleJsonParser::Trim ( _bstr_t Source, _bstr_t Trimer ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_Trim(Source, Trimer, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t ISimpleJsonParser::GetStringValue ( _bstr_t Source, _bstr_t Key ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetStringValue(Source, Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long ISimpleJsonParser::GetIntValue ( _bstr_t Source, _bstr_t Key ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetIntValue(Source, Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ISimpleJsonParser::GetBoolValue ( _bstr_t Source, _bstr_t Key ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetBoolValue(Source, Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t ISimpleJsonParser::JwtBase64UrlEncode ( _bstr_t Input ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_JwtBase64UrlEncode(Input, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t ISimpleJsonParser::JwtBase64UrlDecode ( _bstr_t Input ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_JwtBase64UrlDecode(Input, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t ISimpleJsonParser::SignRs256 ( struct ICertificate * PfxCertificate, _bstr_t Playload ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_SignRs256(PfxCertificate, Playload, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t ISimpleJsonParser::SignRs256WithPrivateKey ( _bstr_t RsaPrivateKey, _bstr_t Playload ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_SignRs256WithPrivateKey(RsaPrivateKey, Playload, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long ISimpleJsonParser::GetCurrentIAT ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetCurrentIAT(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
