@@ -1,3 +1,14 @@
-This project is confidential.
-The project will be shared only in the developer section. You can contact us on issues you can contribute to.
-cyberanticheat@gmail.com
+iletişim @roshteinmail
+
+// Bellek takibi için
+auto debug = CN3DebugSystem::GetInstance();
+debug->TrackAllocation(boyut, "TextureMemory");
+
+// Performans izleme için
+debug->BeginFrame();
+// Frame kodu buraya
+debug->EndFrame();
+
+// Uyarı kaydetmek için
+debug->LogAlert(CN3DebugSystem::Alert::Level::Warning, "Kaynak yükleme hatası");
+
