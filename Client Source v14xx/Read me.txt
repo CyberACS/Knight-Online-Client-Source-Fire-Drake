@@ -6,7 +6,7 @@ debug->TrackAllocation(boyut, "TextureMemory");
 
 // Performans izleme için
 debug->BeginFrame();
-// Frame kodu buraya
+
 debug->EndFrame();
 
 // Uyarı kaydetmek için
