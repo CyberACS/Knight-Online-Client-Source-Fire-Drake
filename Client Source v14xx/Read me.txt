@@ -1,4 +1,4 @@
-iletişim @roshteinmail
+https://t.me/roshteinmail
 
 // Bellek takibi için
 auto debug = CN3DebugSystem::GetInstance();
